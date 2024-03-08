@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_JAAIASK</name>
+    <author>Joomlart</author>
+    <creationDate>2024-03-05</creationDate>
+    <copyright>(C) 2005 Open Source Matters, Inc.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>admin@joomlart.com</authorEmail>
+    <authorUrl>joomlart.com</authorUrl>
+    <version>1.0.0</version>
+    <description>JA AI Ask</description>
+    <namespace path="src">Joomla\Plugin\System\JAAIAsk</namespace>
+    <files>
+        <filename plugin="jaaiask">jaaiask.php</filename>
+        <filename>helper.php</filename>
+        <folder>src</folder>
+        <folder>admin</folder>
+        <folder>layouts</folder>
+        <folder>languages</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">languages/en-GB/plg_system_jaaiask.ini</language>
+        <language tag="en-GB">languages/en-GB/plg_system_jaaiask.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params"></fields>
+    </config>
+</extension>

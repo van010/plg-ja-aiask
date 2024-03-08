@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+<!--    <fields name="params" addfieldpath="/plugins/system/jaidme/layouts/fields">-->
+<!--        <fieldset name="idme_user_config_fr" label="">-->
+<!--            <field name="aiask123" type="aiask123" hidden="true" label="Id.me user infomation home page"/>-->
+<!--        </fieldset>-->
+<!--    </fields>-->
+    <fieldset name="aiask" label="AI_ASK">
+        <field class="hihi123">hello</field>
+    </fieldset>
+</form>
