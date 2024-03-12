@@ -1,0 +1,92 @@
+/* ChatApp.css */
+
+div#react-root{
+  display: none;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.messages-container {
+  /*flex: 1000;*/
+  overflow-y: auto;
+  padding: 10px;
+  text-align: justify;
+}
+
+.message-time{
+  font-size: 11px;
+}
+
+.messages-container .user {
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.messages-container .user .message-user{
+  font-weight: bold;
+}
+
+.messages-container .user .message-content{
+  /*font-weight: bold;*/
+}
+
+
+.messages-container .machine {
+  margin-left: 789px;
+  border: 1px solid #ccc;
+}
+
+.messages-container .machine .message-content {
+  color: red;
+}
+
+.messages-container .machine .message-user {
+  font-weight: bold;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.message.User {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.message.Machine {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+input[type='text'] {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
