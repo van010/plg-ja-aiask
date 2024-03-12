@@ -21,8 +21,20 @@ class PlgSystemJaaiask extends CMSPlugin
 		require_once(JPATH_ROOT . '/plugins/system/jaaiask/layouts/fields/btnField.php');
 	}
 
+	public function onAfterDispatch()
+	{
+		if ($this->app->isClient('site')){
+			$headers = $this->app->getHeaders();
+			/*$headers[4]['name'] = 'Access-Control-Allow-Origin';
+			$headers[4]['value'] = '*';*/
+		}
+	}
+
 	public function onBeforeRender()
 	{
+		if($this->app->isClient('administrator')){
+			return ;
+		}
 		$btn = new BtnField();
 		$btn->loadScripts();
 	}
@@ -43,27 +55,12 @@ class PlgSystemJaaiask extends CMSPlugin
 		}else{
 			$btn = new BtnField();
 			$btn->initButton();
+			echo '<div id="react-root"></div>';
 		}
 		/*$form = new Joomla\CMS\Form\Form('aiask');
 		$file = JPATH_ROOT . '/plugins/system/jaaiask/layouts/askButton.xml';
 		$form->loadFile($file, false);
 		Form::addFormPath(JPATH_ROOT . '/plugins/system/jaaiask/layouts');*/
-	}
-
-	public function onContentPrepareForm($form, $data)
-	{
-		$app = Factory::getApplication();
-		$file = JPATH_ROOT . '/plugins/system/jaaiask/layouts/askButton.xml';
-		$form->loadFile($file, false);
-		if (!($form instanceof Form)){
-            /*$app->enqueueMessage(Text::_('JA_AI_ASK_ERROR_NOT_A_FORM'), 'error');
-            return false;*/
-        }
-	}
-
-	public function prepareForm()
-	{
-		
 	}
 
 	public function onAjaxJaaiask()

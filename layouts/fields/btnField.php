@@ -21,6 +21,8 @@ class BtnField
 		$doc = Factory::getDocument();
 		$doc->addStyleSheet(Uri::root(true) . '/plugins/system/jaaiask/admin/assets/css/ja-aiask.css');
 		$doc->addScript(Uri::root(true) . '/plugins/system/jaaiask/admin/assets/js/ja_aiask.js');
+		// load react built
+		$doc->addScript(Uri::root(true) . '/plugins/system/jaaiask/media/aiask/dist/bundle.js');
 	}
 }
 ?>

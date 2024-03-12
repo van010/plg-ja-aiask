@@ -20,7 +20,8 @@
 }
 
 .ai-modal-content .aiask-quest[id^="ja-aiask-quest-"]{
-  border: 1px solid #c00;
+  margin: 6px 0 3px;
+  border: 1px solid #bdbcbc;
   font-weight: bold;
 }
 

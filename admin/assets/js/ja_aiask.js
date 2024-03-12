@@ -73,15 +73,19 @@ document.addEventListener('DOMContentLoaded', function(){
     fetch(queryString)
         .then(response => response.json())
         .then(d => {
-          var data = d.data[0];
-          if (data.code !== 200){
-          	console.log(data.message);
-          }else{
-            handleRes(data.data, count-1);
-          }
+            if (d.success === false) {
+                alert(d.message);
+            }else {
+                var data = d.data[0];
+                if (data.code !== 200) {
+                    console.log(data.message);
+                } else {
+                    handleRes(data.data, count - 1);
+                }
+            }
         })
         .catch(error => {
-          console.log(`error: ${error}`);
+            console.log(`error: ${error}`);
         });
   };
 

@@ -36,12 +36,13 @@ class ChatHelper
         $options = new Registry();
         $options->set('userAgent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0');
 
-		$res = self::generateRandomSentence();
+		// random test response
+		/*$res = self::generateRandomSentence();
 
 		return [
 			'code' => 200,
 			'data' => $res,
-		];
+		];*/
 
         try {
             $data = new Registry();
@@ -107,6 +108,4 @@ class ChatHelper
 
 	    return $sentence;
 	}
-
-
 }
